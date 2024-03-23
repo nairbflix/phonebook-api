@@ -8,6 +8,7 @@ morgan.token("req-body", (req, res) => {
 });
 
 app.use(cors());
+app.use(express.static("dist"));
 app.use(express.json());
 app.use(morgan(":method :url :status :response-time ms - :req-body"));
 
